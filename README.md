@@ -2,10 +2,10 @@
 
 ## Prerequisites
 - Enable pipelines in repository settings:   
-   1. From within your Bitbucket repository, click “Repository Settings” along the left side of the page   
-   2. Scroll down to the bottom of the menu that appears on the left side of the page to the “Pipelines” section   
-   3. Click “Settings”   
-   4. Click the slider next to “Enable Pipelines” so that it appears green with a white checkmark   
+   - From within your Bitbucket repository, click “Repository Settings” along the left side of the page   
+   - Scroll down to the bottom of the menu that appears on the left side of the page to the “Pipelines” section   
+   - Click “Settings”   
+   - Click the slider next to “Enable Pipelines” so that it appears green with a white checkmark   
 - Add `FUGUE_API_ID` and `FUGUE_API_SECRET` as [repository variables](https://docs.fugue.co/api.html#getting-started-create-client-id-and-secret)
 - Create a git repository in Bitbucket, clone it locally, and ensure it contains the following:
     - A `rules/` directory, which will hold your custom rules defined in `.rego` files
