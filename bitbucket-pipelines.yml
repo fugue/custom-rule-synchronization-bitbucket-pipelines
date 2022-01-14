@@ -1,0 +1,11 @@
+pipelines:
+  default:
+    - step:
+        name: 1 - Sync Rules
+        script:
+          - sudo wget https://github.com/$(wget https://github.com/fugue/fugue-client/releases/latest -O - | egrep '/.*/.*/.*fugue-linux-amd64' -o) -P /usr/local/bin/
+          - mv /usr/local/bin/fugue-linux-amd64 /usr/local/bin/fugue
+          - chmod 755 /usr/local/bin/fugue
+          - fugue --version
+          # Replace <family> with the UUID of your intended target family
+          - fugue sync rules rules/ --target-rule-family <family>
